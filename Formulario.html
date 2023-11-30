@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DENTISTA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family:'Merriweather',serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(43, 150, 154);
+
+            
+        }
+
+        header {
+            background-color: rgb(43, 150, 154);
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            position: relative; /* Para que la posición absoluta funcione dentro de header */
+        }
+
+               /* Estilos para el campo de búsqueda */
+       #searchBar {
+            width: 300px;
+            padding: 8px;
+            border-radius: 10px;
+            border: 1px solid #dc1717;
+            margin-top: 10px;
+        }
+
+        /* Estilos para el botón de búsqueda */
+        #searchButton {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255);
+            color: white;
+            cursor: pointer;
+        }
+        
+    /* configuracion de los links */
+        nav {
+            list-style-type: none;
+            padding: 15px;
+            margin: 5px;
+            background-color: #000000;
+            
+        }
+        #navbar li {
+            display: inline;
+            margin-right: 100px;
+            border-radius: 15px;
+        }
+
+     
+       
+        /* Estilos para cada enlace a dentro de la navegación */
+        #navbar li:nth-child(1) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        #navbar li:nth-child(2) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        #navbar li:nth-child(3) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        #navbar li:nth-child(4) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        #navbar li:nth-child(5) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+       
+     /* Estilos cuando el enlace está en estado 'hover' (cuando pasas el ratón sobre él) */
+     #navbar  li:nth-child(1) a:hover {
+            color: #0ce2d4;
+        }
+
+     #navbar  li:nth-child(2) a:hover {
+            color: #50e20c;
+        }
+
+     #navbar  li:nth-child(3) a:hover {
+            color: #e2700c;
+        }
+        
+     #navbar  li:nth-child(4) a:hover {
+            color: #e20c5a;
+        }
+
+        #navbar  li:nth-child(5) a:hover {
+            color: #e2de0c;
+        }
+        
+        /* CUADROS DE TEXTO */
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #000000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #fcfcfc;
+        }
+
+  
+
+/* Estilos de la imagen y el contenedor */
+.imagen-info {
+  position: relative;
+  color: #ffffff;
+  margin: 10px;
+  
+  
+}
+
+   /* Estilos para imagen diente */
+   .imagen-movida {
+        position: absolute;
+      transform: translateX(-700px); /* Mueve la imagen hacia la derecha */
+      transform: translateY(-200);
+      width: 8%; /* Establece el ancho al 50% del contenedor */
+     
+    }
+
+
+        
+
+      /* Estilos para el formulario */
+      .formulario-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .formulario-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .formulario-container label {
+            margin-bottom: 5px;
+        }
+
+        .formulario-container input[type="text"],
+        .formulario-container input[type="number"],
+        .formulario-container select,
+        .formulario-container textarea {
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .formulario-container input[type="submit"] {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .formulario-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* pie de pagina */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 4% 0;
+        }
+    
+    </style>
+</head>
+
+
+<body>
+
+    <header> 
+        <!-- menu -->
+        <img src="img/WhatsApp Image 2023-11-20 at 8.56.45 PM.jpeg" alt="Consultorio" class="imagen-movida">
+        
+        <!-- Barra de búsqueda -->
+        <form onsubmit="return false;">
+            <input type="text" id="searchBar" placeholder="Buscar...">
+            <button id="searchButton" onclick="buscar()">&#128270;</button>
+            <!-- &#128269; es el código unicode para el símbolo de lupa -->
+        </form>
+        
+        <nav id="navbar">
+          <li><a href="index.html" class="link-intro">Quienes somos</a></li>
+          <li><a href="Tratamientos.html" class="link-tratamientos">Tratamientos</a></li>
+          <li><a href="Formulario.html" class="link-formulario">Formulario</a></li>
+          <li><a href="Tips.html" class="link-tips">Tips y recomendaciones</a></li>
+          <li><a href="contactos.html" class="link-contacto">Contactos</a></li>
+       </nav>
+
+    </header>
+    
+    <div class="formulario-container">
+        <h1>Crea tu cita</h1>
+        <form action="/procesar_formulario" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required><br><br>
+
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo" required>
+                <option value="">Seleccionar</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Helicoptero hapache</option>
+            </select><br><br>
+
+            <label for="consulta">Consulta:</label><br>
+            <textarea id="consulta" name="consulta" rows="4" cols="50" required></textarea><br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <footer><!-- final de pagina -->
+        <p>Todos los derechos son reservados en esta pagina</p>
+        <p>contactanos</p>
+        <p>&copy; 2023 clinca DENTISTA </p>
+    </footer>
+</body>
+</html>

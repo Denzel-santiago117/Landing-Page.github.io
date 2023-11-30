@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DENTISTA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <style>
+        body {
+            font-family: 'Indie Flower', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(182, 79, 207);
+        }
+
+        header {
+            background-color: rgb(43, 150, 154);
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            position: relative; /* Para que la posición absoluta funcione dentro de header */
+        }
+
+
+       /* Estilos para el campo de búsqueda */
+       #searchBar {
+            width: 300px;
+            padding: 8px;
+            border-radius: 10px;
+            border: 1px solid #dc1717;
+            margin-top: 10px;
+        }
+
+        /* Estilos para el botón de búsqueda */
+        #searchButton {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255);
+            color: white;
+            cursor: pointer;
+        }
+        
+    /* configuracion de los links */
+        nav {
+            list-style-type: none;
+            padding: 15px;
+            margin: 5px;
+            background-color: #000000;
+            
+        }
+        #navbar li {
+            display: inline;
+            margin-right: 100px;
+            border-radius: 15px;
+        }
+
+     
+       
+        /* Estilos para cada enlace a dentro de la navegación */
+        #navbar li:nth-child(1) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        #navbar li:nth-child(2) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        #navbar li:nth-child(3) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        #navbar li:nth-child(4) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        #navbar li:nth-child(5) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+
+       
+     /* Estilos cuando el enlace está en estado 'hover' (cuando pasas el ratón sobre él) */
+     #navbar  li:nth-child(1) a:hover {
+            color: #65e20c;
+        }
+
+     #navbar  li:nth-child(2) a:hover {
+            color: #0ce2d4;
+        }
+
+     #navbar  li:nth-child(3) a:hover {
+            color: #e20c0c;
+        }
+        
+     #navbar  li:nth-child(4) a:hover {
+            color: #e25a0c;
+        }
+
+        #navbar  li:nth-child(5) a:hover {
+            color: #de0ce2;
+        }
+        
+        /* TITULOS */
+        h2 {
+            text-align: center; /* Centra los títulos */
+            margin-bottom: 10px; /* Espacio entre los títulos */
+            font-size: 24px; /* Tamaño de fuente */
+            font-weight: bold; /* Negrita */
+        }
+        
+        /* CUADROS DE TEXTO */
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #091054;
+            color: #fcfcfc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para las imágenes (clase "imagen") */
+        .imagen {
+            position: relative;
+            display: block;
+            margin: 20px auto; /* Espaciado entre las imágenes */
+            width: 35%; /* Reducir el tamaño de las imágenes al 50% del contenedor */
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out; /* Efecto de transición al transformar las imágenes */
+        }
+
+        /* Estilos para la información a mostrar */
+        .informacion {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out; /* Efecto de transición para la opacidad */
+        }
+
+        /* Estilos para mostrar la información al hacer clic en las imágenes */
+        .mostrar {
+            display: block !important;
+            opacity: 1;
+        }
+
+        /* Estilos para el cuadro de texto */
+        .cuadro-informacion {
+            background-color: #f2f2f2; /* Color de fondo del cuadro */
+            color: #164a09; /* Color del texto */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+
+
+
+
+        /* pie de pagina */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 4% 0;
+        }
+        
+  
+
+    /* Estilos para imagen diente */
+    .imagen-movida {
+        position: absolute;
+      transform: translateX(-700px); /* Mueve la imagen hacia la derecha */
+      transform: translateY(-200);
+      width: 8%; /* Establece el ancho al 50% del contenedor */
+     
+    }
+  
+    
+    </style>
+</head>
+
+
+<body>
+    
+
+    <header> 
+        <!-- menu -->
+        <img src="img/WhatsApp Image 2023-11-20 at 8.56.45 PM.jpeg" alt="Consultorio" class="imagen-movida">
+        
+        <!-- Barra de búsqueda -->
+        <form onsubmit="return false;">
+            <input type="text" id="searchBar" placeholder="Buscar...">
+            <button id="searchButton" onclick="buscar()">&#128269;</button>
+            <!-- &#128269; es el código unicode para el símbolo de lupa -->
+        </form>
+        
+        <nav id="navbar">
+            <li><a href="index.html" class="link-intro">Quienes somos</a></li>
+            <li><a href="Tratamientos.html" class="link-tratamientos">Tratamientos</a></li>
+            <li><a href="Formulario.html" class="link-formulario">Formulario</a></li>
+            <li><a href="Tips.html" class="link-tips">Tips y recomendaciones</a></li>
+            <li><a href="contactos.html" class="link-contacto">Contactos</a></li>
+         </nav>
+    </header>
+
+    <section><!-- introduccion -->
+        <h2 id="titulo1">¡Lee algunos de nuestros tips para el cuidado de tus dientes!</h2>
+        
+    </section>
+
+
+    <div>
+        <h2 id="titulo2">TIPS PARA CEPILLADO</h2>
+        <img class="imagen" src="img/cepillado.jpg" alt="Cepillado">
+        <div class="informacion">
+            <div class="cuadro-informacion">
+                <h4>1.- Cepillo y pasta de dientes adecuados: Utiliza un cepillo de dientes de cerdas suaves o medianas y una pasta dental con flúor. El flúor ayuda a prevenir la caries dental.</h4>
+                <h4>2.- Cepillado frecuente: Cepíllate los dientes al menos dos veces al día, preferiblemente después de cada comida. Si no puedes cepillarte después de cada comida, al menos hazlo por la mañana y antes de acostarte.</h4>
+                <h4>3.- Técnica de cepillado adecuada: Coloca el cepillo en un ángulo de 45 grados hacia las encías y realiza movimientos cortos y suaves hacia adelante y hacia atrás. No ejerzas demasiada presión para evitar dañar las encías.</h4>
+                <h4>4.- No te olvides de las áreas difíciles: Cepilla la superficie externa, interna y la parte superior de los dientes, así como la lengua y el paladar.</h4>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div>
+        <h2 id="titulo3">TIPS DE PASTA DENTAL</h2>
+        <img class="imagen" src="img/pasta dental.jpg" alt="Imagen 2">
+        <div class="informacion">
+            <div class="cuadro-informacion">
+                <h4>1.- Fluoruro: Busca pastas dentales que contengan fluoruro. El fluoruro es un mineral que fortalece el esmalte dental y ayuda a prevenir la formación de caries.</h4>
+                <h4>2.- Control de la cantidad: Utiliza una cantidad adecuada de pasta dental. No es necesario cubrir completamente el cepillo con pasta. Una pequeña cantidad, del tamaño de un guisante, es suficiente para obtener beneficios efectivos.</h4>
+                <h4>3.- Atención a los ingredientes: Si tienes sensibilidad dental, busca pastas dentales diseñadas específicamente para este problema. Algunas contienen ingredientes que ayudan a reducir la sensibilidad.</h4>
+                <h4>4.- Blanqueamiento dental: Si buscas una pasta dental para blanquear los dientes, elige aquellas que estén formuladas para este propósito. Sin embargo, ten en cuenta que los resultados pueden variar y que es importante seguir las indicaciones del fabricante para un uso seguro y efectivo.</h4>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2 id="titulo4">TIPS DE CEPILLO DENTAL</h2>
+        <img class="imagen" src="img/cepillos.jpg" alt="Imagen 3">
+        <div class="informacion">
+            <div class="cuadro-informacion">
+                <h4>1.- Tipo de cerdas: Opta por un cepillo dental con cerdas suaves o extra suaves. Las cerdas más duras pueden dañar las encías y el esmalte dental.</h4>
+                <h4>2.- Tamaño y forma: Elige un cepillo dental que se adapte cómodamente a tu boca y te permita alcanzar todas las áreas difíciles. Los cabezales pequeños son ideales para llegar a rincones difíciles, como la parte posterior de la boca.           </h4>
+                <h4>3.- Técnica de cepillado: Asegúrate de cepillar todas las superficies de los dientes, incluidas las superficies internas, externas y de masticación. Usa movimientos suaves y circulares, y no apliques demasiada presión para evitar dañar las encías y el esmalte.</h4>
+                <h4>4.- Reemplazo regular: Cambia tu cepillo dental cada 3 a 4 meses, o antes si las cerdas están desgastadas o deformadas. Un cepillo desgastado no limpia de manera efectiva.</h4>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2 id="titulo5">TIPS DE HILO DENTAL</h2>
+        <img class="imagen" src="img/hilo dental.jpg" alt="Imagen 4">
+        <div class="informacion">
+            <div class="cuadro-informacion">
+                <h4>1.- Técnica correcta: Toma aproximadamente 45 cm (18 pulgadas) de hilo dental y enróllalo alrededor de tus dedos medios, dejando unos 5-7 cm (2-3 pulgadas) de hilo entre ambos dedos. Utiliza los dedos índices para sostener y guiar el hilo entre los dientes.</h4>
+                <h4>2.- Movimientos suaves: Desliza suavemente el hilo dental hacia arriba y hacia abajo entre cada diente, formando una "C" alrededor del diente y llevando el hilo debajo de la línea de las encías. Evita movimientos bruscos que puedan lastimar las encías.</h4>
+                <h4>3.- Usa hilo dental adecuado: Puedes elegir entre diferentes tipos de hilo dental, como el encerado, no encerado, con sabor, cintas dentales o hilo dental más grueso para adaptarse a tus preferencias y necesidades dentales.</h4>
+                <h4>4.- Frecuencia: Utiliza el hilo dental al menos una vez al día, preferiblemente antes de cepillarte los dientes. Esto ayuda a eliminar la placa y los restos de comida que el cepillado por sí solo no puede alcanzar.</h4>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+
+    <footer><!-- final de pagina -->
+        <p>Todos los derechos son reservados en esta pagina</p>
+        <p>contactanos</p>
+        <p>&copy; 2023 clinca DENTISTA </p>
+    </footer>
+
+    <script>
+        // Obtener todas las imágenes y su información asociada
+        const imagenes = document.querySelectorAll('.imagen');
+        const informaciones = document.querySelectorAll('.informacion');
+
+        // Función para mostrar u ocultar la información al hacer clic en las imágenes
+        imagenes.forEach((imagen, index) => {
+            imagen.addEventListener('click', function() {
+                informaciones[index].classList.toggle('mostrar');
+            });
+        });
+    </script>
+
+<script>
+    // Función para generar un color aleatorio en formato hexadecimal
+    function generarColorHexadecimal() {
+        return '#' + Math.floor(Math.random()*16777215).toString(16);
+    }
+
+    // Función para cambiar el color de los títulos cada segundo
+    function cambiarColorTitulos() {
+        setInterval(function() {
+            document.getElementById('titulo1').style.color = generarColorHexadecimal();
+            document.getElementById('titulo2').style.color = generarColorHexadecimal();
+            document.getElementById('titulo3').style.color = generarColorHexadecimal();
+            document.getElementById('titulo4').style.color = generarColorHexadecimal();
+            document.getElementById('titulo5').style.color = generarColorHexadecimal();
+        }, 1000); // Cambio de color cada 1000 milisegundos (1 segundo)
+    }
+
+    // Llama a la función para cambiar el color de los títulos
+    cambiarColorTitulos();
+</script>
+<footer><!-- final de pagina -->
+    <p>Todos los derechos son reservados en esta pagina</p>
+    <p>contactanos</p>
+    <p>&copy; 2023 clinca DENTISTA </p>
+</footer>
+
+
+
+
+
+</body>
+</html>

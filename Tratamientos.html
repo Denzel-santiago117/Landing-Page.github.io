@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DENTISTA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <style>
+        body {
+          
+          font-family: 'Cormorant Garamond', serif;
+
+            margin: 0;
+            padding: 0;
+            background-color: rgb(155, 153, 27);
+        }
+
+        header {
+            background-color: rgb(43, 150, 154);
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            position: relative; /* Para que la posición absoluta funcione dentro de header */
+        }
+
+
+       /* Estilos para el campo de búsqueda */
+       #searchBar {
+            width: 300px;
+            padding: 8px;
+            border-radius: 10px;
+            border: 1px solid #dc1717;
+            margin-top: 10px;
+        }
+
+        /* Estilos para el botón de búsqueda */
+        #searchButton {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255);
+            color: white;
+            cursor: pointer;
+        }
+        
+    /* configuracion de los links */
+        nav {
+            list-style-type: none;
+            padding: 15px;
+            margin: 5px;
+            background-color: #000000;
+            
+        }
+        #navbar li {
+            display: inline;
+            margin-right: 100px;
+            border-radius: 15px;
+        }
+
+     
+       
+        /* Estilos para cada enlace a dentro de la navegación */
+        #navbar li:nth-child(1) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        #navbar li:nth-child(2) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        #navbar li:nth-child(3) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        #navbar li:nth-child(4) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        #navbar li:nth-child(5) a {
+            color: #fcfcfc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+       
+     /* Estilos cuando el enlace está en estado 'hover' (cuando pasas el ratón sobre él) */
+     #navbar  li:nth-child(1) a:hover {
+            color: #0ce2d4;
+        }
+
+     #navbar  li:nth-child(2) a:hover {
+            color: #50e20c;
+        }
+
+     #navbar  li:nth-child(3) a:hover {
+            color: #e2700c;
+        }
+        
+     #navbar  li:nth-child(4) a:hover {
+            color: #e20c5a;
+        }
+
+        #navbar  li:nth-child(5) a:hover {
+            color: #e2de0c;
+        }
+        
+        /* CUADROS DE TEXTO */
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #000000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #fcfcfc;
+        }
+
+  
+
+/* Estilos de la imagen y el contenedor */
+.imagen-info {
+  position: relative;
+  color: #ffffff;
+  margin: 10px;
+  
+  
+}
+
+.imagen {
+  cursor: pointer;
+  width: 300px; /* Ajusta el ancho según tus necesidades */
+  height: auto;
+  transition: filter 0.5s ease-in-out;
+}
+
+/* Estilos del texto de información */
+.informacion {
+  display: none;
+  margin-top: 5px; /* Espacio entre la imagen y el texto de información */
+  padding: 5px;
+  border: 1px solid #ccc; /* Borde opcional para la información */
+  border-radius: 5px; /* Bordes redondeados para la información */
+  background-color: #0015ff; /* Color de fondo para la información */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para la información */
+}
+
+/* Estilos para mostrar la información */
+.mostrar {
+  display: block;
+}
+
+/* Estilos para la aparición de las imágenes */
+.izquierda {
+  animation: aparecerIzquierda 1s ease forwards;
+}
+
+.derecha {
+  animation: aparecerDerecha 1s ease forwards;
+}
+
+@keyframes aparecerIzquierda {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes aparecerDerecha {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+
+}
+        /* pie de pagina */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 4% 0;
+        }
+        
+  
+
+    /* Estilos para imagen diente */
+    .imagen-movida {
+        position: absolute;
+      transform: translateX(-700px); /* Mueve la imagen hacia la derecha */
+      transform: translateY(-200);
+      width: 8%; /* Establece el ancho al 50% del contenedor */
+     
+    }
+  
+    
+    </style>
+</head>
+
+
+<body>
+    
+
+    <header> 
+        <!-- menu -->
+        <img src="img/WhatsApp Image 2023-11-20 at 8.56.45 PM.jpeg" alt="Consultorio" class="imagen-movida">
+        
+        <!-- Barra de búsqueda -->
+        <form onsubmit="return false;">
+            <input type="text" id="searchBar" placeholder="Buscar...">
+            <button id="searchButton" onclick="buscar()">&#128270;</button>
+            <!-- &#128269; es el código unicode para el símbolo de lupa -->
+        </form>
+        
+        <nav id="navbar">
+          <li><a href="index.html" class="link-intro">Quienes somos</a></li>
+          <li><a href="Tratamientos.html" class="link-tratamientos">Tratamientos</a></li>
+          <li><a href="Formulario.html" class="link-formulario">Formulario</a></li>
+          <li><a href="Tips.html" class="link-tips">Tips y recomendaciones</a></li>
+          <li><a href="contactos.html" class="link-contacto">Contactos</a></li>
+       </nav>
+
+    </header>
+
+
+    <section><!-- introduccion -->
+        <h2>¡Bienvenido!</h2>
+        <h3>Aqui podras investigar y encontrar informacion sobre los diferentes tratamientos que podemos ofrecerte para que puedas agendar tu cita</h3>
+        
+    </section>
+<!-- imageneeeees -->
+    
+
+      <div class="imagen-info derecha" id="imagenInfo1">
+  <h2>Limpieza</h2>
+  <img class="imagen" src="img/Limpieza.png" alt="Imagen 1" onclick="mostrarInfo(1)">
+  <div class="informacion oculto" id="info1">
+    <p>La limpieza o profisalix es un tratamiento preventivo el cual consiste en la remoción de placa dentobacteriana, así como cálculos de sarro. Este tratamiento es mínimamente invasivo y se puede realizar de dos formas, mediante tracción mecánica con curetas o mediante ultrasonido.</p>
+  </div>
+</div>
+
+<div class="imagen-info izquierda" id="imagenInfo2">
+  <h2>Resinas</h2>
+  <img class="imagen" src="img/resinas.jpg" alt="Imagen 2" onclick="mostrarInfo(2)">
+  <div class="informacion oculto" id="info2">
+    <p>La resina o composite es un tratamiento realizado a la remoción de caries dental. Este tratamiento conlleva la utilización ocasionalmente de anestesia y es más estético que una amalgama ya que busca el color del diente natural.</p>
+  </div>
+</div>
+
+<div class="imagen-info derecha" id="imagenInfo3">
+  <h2>Protesis</h2>
+  <img class="imagen" src="img/protesis.jpg" alt="Imagen 3" onclick="mostrarInfo(3)">
+  <div class="informacion oculto" id="info3">
+    <p>Existen dos formas de prótesis dental, la fija y la removible. La diferencia más grande entre ellas es que una se retira y la otra queda en boca. La elección del tipo de prótesis depende de la misma cavidad oral y su estado a la hora de la revisión.</p>
+  </div>
+</div>
+
+<div class="imagen-info izquierda" id="imagenInfo4">
+  <h2>Endodoncia</h2>
+  <img class="imagen" src="img/endodoncia.jpg" alt="Imagen 4" onclick="mostrarInfo(4)">
+  <div class="informacion oculto" id="info4">
+    <p>La endodoncia es un tratamiento especializado referido a salvar órganos dentales, por medio de la remoción de tejidos pulpares, que dan irrigación y sensibilidad a la pieza dental. Al final del procedimiento se rellena el órgano dental para prepararlo a su próximo procedimiento.</p>
+  </div>
+</div>
+    
+
+
+    <footer><!-- final de pagina -->
+        <p>Todos los derechos son reservados en esta pagina</p>
+        <p>contactanos</p>
+        <p>&copy; 2023 clinca DENTISTA </p>
+    </footer>
+</body>
+</html>
